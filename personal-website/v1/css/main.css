@@ -1,0 +1,33 @@
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  p {
+      font-size: 14px;
+      font-weight: normal;
+  }
+  
+  .container {
+    max-width: 960px;
+    height: fit-content;
+  }
+
+  .follow-button  {
+    width: 90%;
+    margin: 0;
+  }
+    @media (max-width: 768px) {
+      .follow-button  {
+        width: 100%;
+      }
+    }
+  
+
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .35rem .85rem rgba(0, 0, 0, .05); }

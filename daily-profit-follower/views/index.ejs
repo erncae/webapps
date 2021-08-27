@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Profit & Loss Follower</title>
+</head>
+
+<body>
+    <tbody>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Total</th>
+                <th>Change since previous day</th>
+            </tr>
+            <tr>
+                <td>
+                    <%= data[0].date %>
+                </td>
+                <td>
+                    <%= data[0].total %>
+                </td>
+                <td>0</td>
+            </tr>
+            <% for(var i=1; i < data.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= data[i].date %>
+                    </td>
+                    <td>
+                        <%= data[i].total %>
+                    </td>
+                    <td>
+                        <%= (((data[i].total / data[i-1].total)*100)-100) %>
+                    </td>
+                </tr>
+                <% }%>
+        </table>
+    </tbody>
+
+    <form action="/add" method="post">
+        <label for="total">Today total:</label><br>
+        <input type="text" id="total" name="total" required><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+</body>
+
+</html>
